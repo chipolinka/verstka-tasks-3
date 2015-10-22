@@ -6,13 +6,216 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
-        <input
-            type="text"
-            placeholder="Город отправления"
-            value=""
-            onkeyup="this.setAttribute('value', this.value)">
-
-        <!-- Здесь применять вашу самую сильную магию -->
+        <header>
+            <h1>Табло рейсов</h1>
+        </header>
+        <main>
+            <input
+                class="getCity"
+                type="text"
+                placeholder="Город отправления"
+                value=""
+                onkeyup="this.setAttribute('value', this.value)"><br>
+            <div class="table schedule">
+                <div class="row">
+                    <div class="cell th">тип рейса</div>
+                    <div class="cell th">номер рейса</div>
+                    <div class="cell th">авиакомпания</div>
+                    <div class="cell th logo">логотип</div>
+                    <div class="cell th">тип воздушного судна</div>
+                    <div class="cell th">пункт назначения</div>
+                    <div class="cell th">время</div>
+                    <div class="cell th">номер терминала</div>
+                    <div class="cell th">статус рейса</div>
+                </div>
+                <div class="row" data-cityName="Екатеринбург">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell">4430</div>
+                    <div class="cell">AirFrance</div>
+                    <div class="cell logo airfrance"></div>
+                    <div class="cell typePlane">А-321</div>
+                    <div class="cell">Екатеринбург</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Челябинск">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell">4964</div>
+                    <div class="cell">AirFrance</div>
+                    <div class="cell logo airfrance"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Челябинск</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Санкт-Петербург">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell">8153</div>
+                    <div class="cell">Россия</div>
+                    <div class="cell logo russia"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Санкт-Петербург</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">приземлился</div>
+                </div>
+                <div class="row" data-cityName="Краснодар">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell">2901</div>
+                    <div class="cell">KLM</div>
+                    <div class="cell logo klm"></div>
+                    <div class="cell typePlane">А-319</div>
+                    <div class="cell">Краснодар</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Челябинск">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell"><span>2942</span></div>
+                    <div class="cell">KLM</div>
+                    <div class="cell logo klm"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Челябинск</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Екатеринбург">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell">3234</div>
+                    <div class="cell">KLM</div>
+                    <div class="cell logo klm"></div>
+                    <div class="cell typePlane">А-321</div>
+                    <div class="cell">Екатеринбург</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Санкт-Петербург">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell">031</div>
+                    <div class="cell">Аэрофлот</div>
+                    <div class="cell logo aeroflot"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Санкт-Петербург</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">приземлился</div>
+                </div>
+                <div class="row" data-cityName="Краснодар">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell">1112</div>
+                    <div class="cell">Аэрофлот</div>
+                    <div class="cell logo aeroflot"></div>
+                    <div class="cell typePlane">А-319</div>
+                    <div class="cell">Краснодар</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Екатеринбург">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell">1408</div>
+                    <div class="cell">Аэрофлот</div>
+                    <div class="cell logo aeroflot"></div>
+                    <div class="cell typePlane">А-321</div>
+                    <div class="cell">Екатеринбург</div>
+                    <div class="cell time">00:05</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Париж">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell">4451</div>
+                    <div class="cell">Аэрофлот</div>
+                    <div class="cell logo aeroflot"></div>
+                    <div class="cell typePlane">А-319</div>
+                    <div class="cell">Париж</div>
+                    <div class="cell time">00:10</div>
+                    <div class="cell terminal">E</div>
+                    <div class="cell">приземлился</div>
+                </div>
+                <div class="row" data-cityName="Екатеринбург">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell"><span>4430</span></div>
+                    <div class="cell">AirFrance</div>
+                    <div class="cell logo airfrance"></div>
+                    <div class="cell typePlane">А-321</div>
+                    <div class="cell">Екатеринбург</div>
+                    <div class="cell time">00:25</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Челябинск">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell"><span>4964</span></div>
+                    <div class="cell">AirFrance</div>
+                    <div class="cell logo airfrance"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Челябинск</div>
+                    <div class="cell time">00:25</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Санкт-Петербург">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell"><span>8153</span></div>
+                    <div class="cell">Россия</div>
+                    <div class="cell logo russia"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Санкт-Петербург</div>
+                    <div class="cell time">00:25</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">приземлился</div>
+                </div>
+                <div class="row" data-cityName="Краснодар">
+                    <div class="cell departure">вылет</div>
+                    <div class="cell"><span>2901</span></div>
+                    <div class="cell">KLM</div>
+                    <div class="cell logo klm"></div>
+                    <div class="cell typePlane">А-319</div>
+                    <div class="cell">Краснодар</div>
+                    <div class="cell time">00:25</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">вылетел</div>
+                </div>
+                <div class="row" data-cityName="Санкт-Петербург">
+                    <div class="cell arrival">прилёт</div>
+                    <div class="cell"><span>8153</span></div>
+                    <div class="cell">Россия</div>
+                    <div class="cell logo russia"></div>
+                    <div class="cell typePlane">А-320</div>
+                    <div class="cell">Санкт-Петербург</div>
+                    <div class="cell time">00:25</div>
+                    <div class="cell terminal">D</div>
+                    <div class="cell">задерживается до 14:15</div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <form>
+                <h3>Отправка данных о рейсе на телефон</h3>
+                <label>Введите номер телефона</label><br>
+                <input
+                    placeholder="79ххххххххх"
+                    name="phone"
+                    value=""
+                    type="tel"
+                    pattern="79[0-9]{9}"
+                    required><br>
+                <label>Введите E-mail</label><br>
+                <input
+                    placeholder="asdf@asdf.asdf"
+                    name="email"
+                    value=""
+                    type="email"
+                    pattern="[a-zA-Z0-9-_]+@[a-zA-Z-]+.[a-z]+"
+                    required><br>
+                <button type="submit">Отправить данные о рейсе на телефон</button>
+            </form>
+        </footer>
     </body>
 </html>

@@ -1,0 +1,115 @@
+.table
+{
+    display: table;
+    border-collapse: collapse;
+    font-family: "Times";
+    border-color: gray solid 2px;
+    overflow: hidden;
+}
+
+.cell
+{
+    display: table-cell;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.row
+{
+    display: table-row;
+    position: relative;
+}
+
+.row:nth-child(2n):not(:hover) .cell::after
+{
+    background: #cfdefd;
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.row:hover
+{
+    background: #716de5;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    display: table-row;
+}
+
+.th
+{
+    background: #d9c8f4;
+    font-size: 0.8em;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.cell:hover::after,
+.th:hover::after
+{
+    background: #716de5;
+    content: "";
+    position: absolute;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: -10000px;
+    height: 20000px;
+    width: 100%;
+    z-index: -1;
+}
+
+.typePlane,
+.terminal,
+.time
+{
+    padding-left: 0;
+    text-align: center;
+    width: 25px;
+}
+
+.logo
+{
+    padding-left: 5px;
+    width: 5px;
+    vertical-align: center;
+    text-align: center;
+    background-size: 70px 20px;
+}
+
+.aeroflot
+{
+    background: url(http://opentoronto.com/pics/aeroflot_air_airlines_LOGO.jpg) no-repeat;
+    background-size: 70px 20px;
+}
+
+.airfrance
+{
+    background: url(http://www.vietnamonline.com/js/ckfinder/userfiles/images/AirFrance%20logo.png) no-repeat;
+    background-size: 70px 20px;
+}
+
+.klm
+{
+    background: url(http://assets.gcstatic.com/u/apps/asset_manager/uploaded/2012/11/klm-logo-1331564957.jpg) no-repeat;
+    background-size: 70px 20px;
+}
+
+.russia
+{
+    background: url(http://avia-mir.ru/Aviakompanii/Russian_airlines_logo.jpg) no-repeat;
+    background-size: 70px 20px;
+}
+
+button
+{
+    visibility: hidden;
+}
+
+input[type="tel"]:valid + br + label + br + input[type="email"]:valid + br + button
+{
+    visibility: visible;
+}

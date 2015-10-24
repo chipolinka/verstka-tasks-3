@@ -71,6 +71,26 @@
     width: 25px;
 }
 
+.aeroflot
+{
+    background: url(http://opentoronto.com/pics/aeroflot_air_airlines_LOGO.jpg);
+}
+
+.airfrance
+{
+    background: url(http://www.vietnamonline.com/js/ckfinder/userfiles/images/AirFrance%20logo.png);
+}
+
+.klm
+{
+    background: url(http://assets.gcstatic.com/u/apps/asset_manager/uploaded/2012/11/klm-logo-1331564957.jpg);
+}
+
+.russia
+{
+    background: url(http://avia-mir.ru/Aviakompanii/Russian_airlines_logo.jpg);
+}
+
 .logo
 {
     padding-left: 5px;
@@ -78,30 +98,7 @@
     vertical-align: center;
     text-align: center;
     background-size: 70px 20px;
-}
-
-.aeroflot
-{
-    background: url(http://opentoronto.com/pics/aeroflot_air_airlines_LOGO.jpg) no-repeat;
-    background-size: 70px 20px;
-}
-
-.airfrance
-{
-    background: url(http://www.vietnamonline.com/js/ckfinder/userfiles/images/AirFrance%20logo.png) no-repeat;
-    background-size: 70px 20px;
-}
-
-.klm
-{
-    background: url(http://assets.gcstatic.com/u/apps/asset_manager/uploaded/2012/11/klm-logo-1331564957.jpg) no-repeat;
-    background-size: 70px 20px;
-}
-
-.russia
-{
-    background: url(http://avia-mir.ru/Aviakompanii/Russian_airlines_logo.jpg) no-repeat;
-    background-size: 70px 20px;
+    background-repeat: no-repeat;
 }
 
 button
@@ -109,7 +106,20 @@ button
     visibility: hidden;
 }
 
-input[type="tel"]:valid + br + label + br + input[type="email"]:valid + br + button
+input[type="tel"]:valid ~ input[type="email"]:valid ~ button
 {
     visibility: visible;
+}
+
+input[value="E"]:checked ~ div.table div.D,
+input[value="D"]:checked ~ div.table div.E,
+input[value="arrival"]:checked ~ div.table div.departure,
+input[value="departure"]:checked ~ div.table div.arrival,
+input.getCity[value="Екатеринбург"] ~ div.table div.row:not(.Ekb):not(.head),
+input.getCity[value="Челябинск"] ~ div.table div.row:not(.Che):not(.head),
+input.getCity[value="Краснодар"] ~ div.table div.row:not(.Kra):not(.head),
+input.getCity[value="Париж"] ~ div.table div.row:not(.Par):not(.head),
+input.getCity[value="Санкт-Петербург"] ~ div.table div.row:not(.Spb):not(.head)
+{
+    display: none;
 }
